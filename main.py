@@ -291,7 +291,8 @@ getone = getone()
 client = WeChatClient(appID, appsecret)
 wm = WeChatMessage(client)
 
-if "06:00:00" < nowDate < "22:00:00":
+# 北京时间6:00-14:00 如更改时间自行减8
+if "22:00:00" < nowDate < "6:00:00":
     # 微信消息模板 ID
     template_id = template1
     # 自定义的内容
@@ -318,7 +319,7 @@ if "06:00:00" < nowDate < "22:00:00":
         "meeting": {"value": get_count(),"color": get_random_color()},\
    }
 
-# if "11:00:00" < nowDate < "14:00:00":
+# if "3:00:00" < nowDate < "6:00:00":
 #     template_id = template2
 #     data = {
 #         "nowDate": {"value": nowDate, "color": get_random_color()},
@@ -328,7 +329,7 @@ if "06:00:00" < nowDate < "22:00:00":
 #         "kqtype": {"value": suggestion, "color": suggestioncolor()},
 #         "tem": {"value": temperature + '℃', "color": get_random_color()},
 #     }
-# if "14:00:00" < nowDate < "18:00:00":
+# if "6:00:00" < nowDate < "10:00:00":
 #     template_id = template3
 #     data = {
 #         "nowDate": {"value": nowDate, "color": get_random_color()},
@@ -338,7 +339,7 @@ if "06:00:00" < nowDate < "22:00:00":
 #         "kqtype": {"value": suggestion, "color": suggestioncolor()},
 #         "tem": {"value": temperature + '℃', "color": get_random_color()},
 #     }
-# if "18:00:00" < nowDate < "24:00:00":
+# if "10:00:00" < nowDate < "16:00:00":
 #     template_id = template4
 #     data = {
 #         "nowDate": {"value": nowDate, "color": get_random_color()},
